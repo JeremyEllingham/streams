@@ -21,6 +21,12 @@
       "description": "Testing after the refactor of StreamCreate",
       "userId": "106020900133971725356",
       "id": 5
+    },
+    {
+      "title": "My great stream",
+      "description": "test stream",
+      "userId": "118400355051207975323",
+      "id": 6
     }
   ]
 }
