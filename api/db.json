@@ -27,6 +27,12 @@
       "description": "test stream",
       "userId": "118400355051207975323",
       "id": 6
+    },
+    {
+      "title": "My second great stream",
+      "description": "streaming cards",
+      "userId": "118400355051207975323",
+      "id": 7
     }
   ]
 }
