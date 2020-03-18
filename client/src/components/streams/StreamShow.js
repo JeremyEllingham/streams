@@ -31,7 +31,7 @@ class StreamShow extends Component {
 
     this.player = flv.createPlayer({
       type: 'flv',
-      url: `http://localhost:8000/live/${id}.flv`
+      url: `http://rtmpserver:8000/live/${id}.flv`
     });
     this.player.attachMediaElement(this.videoRef.current);
     this.player.load();
