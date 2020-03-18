@@ -15,4 +15,5 @@ services:
   rtmpserver:
     build: ./rtmpserver
     ports:
+      - "1935:1935"
       - "8000:8000"

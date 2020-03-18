@@ -31,7 +31,7 @@ class StreamShow extends Component {
 
     this.player1 = flv.createPlayer({
       type: 'flv',
-      url: `http://rtmpserver:8000/live/6.flv`
+      url: `http://localhost:8000/live/6.flv`
     });
     if (!this.videoRef1.current) { return }
     this.player1.attachMediaElement(this.videoRef1.current);
@@ -39,7 +39,7 @@ class StreamShow extends Component {
 
     this.player2 = flv.createPlayer({
       type: 'flv',
-      url: `http://rtmpserver:8000/live/7.flv`
+      url: `http://localhost:8000/live/7.flv`
     });
     if (!this.videoRef2.current) { return }
     this.player2.attachMediaElement(this.videoRef2.current);
