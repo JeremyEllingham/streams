@@ -8,6 +8,8 @@ import StreamShow from './streams/StreamShow';
 import Header from './Header';
 import history from '../history';
 
+import Match from './matches/Match/index';
+
 const App = () => {
     return (
         <div>
@@ -20,6 +22,7 @@ const App = () => {
                         <Route path="/streams/edit/:id" exact component={StreamEdit} />
                         <Route path="/streams/delete/:id" exact component={StreamDelete} />
                         <Route path="/streams/:id" exact component={StreamShow} />
+                        <Route path="/matches/view" exact component={Match} />
                     </Switch>
                 </div>
             </Router>

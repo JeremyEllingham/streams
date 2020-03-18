@@ -48,6 +48,7 @@ class StreamList extends React.Component {
   render() {
     return (
       <div>
+        <Link to={`/matches/view`}>See current match</Link>
         <h2 className="header">Streams</h2>
         <div className="list">{this.renderList()}</div>
         {this.renderCreate()}
