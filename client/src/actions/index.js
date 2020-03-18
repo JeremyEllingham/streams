@@ -1,6 +1,7 @@
 import { SIGN_IN, SIGN_OUT, CREATE_STREAM, FETCH_STREAM, FETCH_STREAMS, DELETE_STREAM, EDIT_STREAM } from './types';
 import streams from '../apis/streams';
 import history from '../history';
+import axios from 'axios';
 
 export const signIn = (userId) => {
     return {
@@ -28,12 +29,12 @@ export const fetchStreams = () => async dispatch => {
 }
 
 export const fetchStream = (id) => async dispatch => {
-    const response = await streams.get(`/streams/${id}`);
+    const response = await axios.get(`http://54.206.69.82:3001/streams/${id}`);
     dispatch({ type: FETCH_STREAM, payload: response.data })
 }
 
 export const editStream = (id, formValues) => async dispatch => {
-    const response = await streams.patch(`/streams/${id}`, formValues);
+    const response = await streams.patch(`http://54.206.69.82:3001/streams/${id}`, formValues);
     dispatch({ type: EDIT_STREAM, payload: response.data });
     history.push('/');
 }
