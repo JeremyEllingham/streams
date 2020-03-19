@@ -6,7 +6,7 @@ services:
       - "3000:3000"
   api:
     image: williamyeh/json-server
-    command: -p 3001 -w db.json
+    command: -p 3001 -w db.json --no-cors
     ports:
       - "3001:3001"
     volumes:
