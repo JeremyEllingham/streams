@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for magic streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "JeremyEllingham",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
