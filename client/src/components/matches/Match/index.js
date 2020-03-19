@@ -11,8 +11,8 @@ class StreamShow extends Component {
   }
 
   componentDidMount() {
-    // this.props.fetchStream(6);
-    // this.props.fetchStream(7);
+    this.props.fetchStream(6);
+    this.props.fetchStream(7);
     this.buildPlayer();
   }
 
@@ -21,8 +21,8 @@ class StreamShow extends Component {
   }
 
   componentWillUnmount() {
-    this.player1.destroy();
-    this.player2.destroy();
+    if (this.player1) { this.player1.destroy(); }
+    if (this.player2) { this.player2.destroy(); }
   }
 
   buildPlayer() {
@@ -69,4 +69,4 @@ const mapStateToProps = (state, ownProps) => {
   return { stream1: state.streams[6], stream2: state.streams[7] }
 }
 
-export default connect(mapStateToProps, { })(StreamShow);
+export default connect(mapStateToProps, { fetchStream })(StreamShow);
