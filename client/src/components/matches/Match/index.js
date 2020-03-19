@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchStream } from '../../../actions';
+import { fetchStream } from '../../../actions/index'
 import flv from 'flv.js';
 
 class StreamShow extends Component {
@@ -11,8 +11,7 @@ class StreamShow extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchStream(6);
-    this.props.fetchStream(7);
+    this.props.fetchStream(6)
     this.buildPlayer();
   }
 
@@ -48,6 +47,8 @@ class StreamShow extends Component {
   }
 
   render() {
+    console.log('state: ', this.props)
+
     if (!this.props.stream1 || !this.props.stream2 ) {
       return <div>Loading...</div>
     }

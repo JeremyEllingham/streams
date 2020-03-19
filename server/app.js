@@ -44,4 +44,9 @@ const streamsData = [
 
 app.get('/streams', (req, res) => res.send(streamsData))
 
+app.get('/streams/:id', (req, res) => { 
+  const stream = streamsData.find(s => s.id.toString() === req.params.id)
+  res.send(stream)
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
