@@ -12,6 +12,7 @@ class StreamShow extends Component {
 
   componentDidMount() {
     this.props.fetchStream(6)
+    this.props.fetchStream(7)
     this.buildPlayer();
   }
 
