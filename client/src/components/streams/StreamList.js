@@ -21,10 +21,10 @@ class StreamList extends React.Component {
   }
 
   renderList() {
-    console.log('streams: ', this.props.streams)
     return this.props.streams.map(stream => {
       return (
         <div className="item" key={stream.id}>
+            <p>Stream name: {JSON.stringify(stream)}</p>
           <div className="content">
           <Link to={`/streams/${stream.id}`}>{stream.title}</Link>
           </div>
