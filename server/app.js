@@ -5,8 +5,7 @@ const port = 3002
 
 app.use(cors())
 
-const streamsData = {
-    "streams": [
+const streamsData = [
       {
         "title": "Coding",
         "description": "Live coding channedl",
@@ -42,7 +41,6 @@ const streamsData = {
         "id": 7
       }
     ]
-  }
 
 app.get('/streams', (req, res) => res.send(streamsData))
 
